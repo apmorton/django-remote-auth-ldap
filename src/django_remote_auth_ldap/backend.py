@@ -14,15 +14,15 @@ class RemoteUserLDAPBackend(LDAPBackend):
         return user
 
     def correct_domain(self, username):
-        if not settings.CHECK_DOMAIN:
+        if not settings.DRAL_CHECK_DOMAIN:
             return True
         if not '\\' in username:
             return False
         (dom, username) = username.split('\\', 1)
-        return dom.lower() in settings.DOMAINS
+        return dom.lower() in settings.DRAL_DOMAINS
 
     def clean_username(self, username):
-        if not settings.STRIP_DOMAIN:
+        if not settings.DRAL_STRIP_DOMAIN:
             return username
         if not '\\' in username:
             return username
