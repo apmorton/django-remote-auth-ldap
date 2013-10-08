@@ -1,7 +1,7 @@
 Django Remote Auth LDAP
 =========================
 
-[![Build Status](https://travis-ci.org/Juvenal1228/django-remote-auth-ldap.png?branch=master)](https://travis-ci.org/Juvenal1228/django-remote-auth-ldap)
+[![Build Status](https://travis-ci.org/apmorton/django-remote-auth-ldap.png?branch=master)](https://travis-ci.org/apmorton/django-remote-auth-ldap)
 
 Purpose
 -------
@@ -26,7 +26,7 @@ Install with pip/easy_install from the pypi
 
 or clone the latest source
 
-    git clone https://github.com/Juvenal1228/django-remote-auth-ldap.git
+    git clone https://github.com/apmorton/django-remote-auth-ldap.git
     cd django-remote-auth-ldap
     python setup.py install
 
