@@ -1,8 +1,13 @@
+from django.contrib.auth.backends import RemoteUserBackend
+
 from django_auth_ldap.backend import LDAPBackend, _LDAPUser
 from django_remote_auth_ldap.conf import settings
 
 
 class RemoteUserLDAPBackend(LDAPBackend):
+    # unforgivable megahax to avoid reimplementing RemoteUserMiddleware
+    __class__ = RemoteUserBackend
+
     def authenticate(self, remote_user):
         if not self.correct_domain(remote_user):
             return None

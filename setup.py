@@ -5,7 +5,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(here, 'README.md')).read()
 
 
-version = '0.1.3'
+version = '0.1.4'
 
 install_requires = [
     'django-auth-ldap',
@@ -29,7 +29,7 @@ setup(
     keywords='',
     author='Austin Morton',
     author_email='amorton@juvsoft.com',
-    url='https://github.com/Juvenal1228/django-remote-auth-ldap',
+    url='https://github.com/apmorton/django-remote-auth-ldap',
     license='MIT',
     packages=find_packages('src'),
     package_dir={'': 'src'},
