@@ -8,7 +8,7 @@ class RemoteUserLDAPBackend(LDAPBackend):
     # unforgivable megahax to avoid reimplementing RemoteUserMiddleware
     __class__ = RemoteUserBackend
 
-    def authenticate(self, remote_user):
+    def authenticate(self, request, remote_user):
         if not self.correct_domain(remote_user):
             return None
 
