@@ -1,0 +1,20 @@
+dn: o=test
+objectClass: organization
+o: test
+
+dn: ou=people,o=test
+objectClass: organizationalUnit
+ou: people
+
+dn: uid=alice,ou=people,o=test
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: posixAccount
+cn: alice
+uid: alice
+userPassword: password
+uidNumber: 1000
+gidNumber: 1000
+givenName: Alice
+sn: Adams
+homeDirectory: /home/alice

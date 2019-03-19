@@ -2,3 +2,4 @@ nose
 coverage
 flake8
 Django
+parameterized

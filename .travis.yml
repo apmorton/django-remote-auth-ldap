@@ -1,5 +1,10 @@
 dist: xenial
 language: python
+addons:
+  apt:
+    packages:
+      - ldap-utils
+      - slapd
 python:
   - "2.7"
   - "3.4"
@@ -11,4 +16,5 @@ install:
   - pip install -e .
 script:
   - flake8 src
-  - python setup.py nosetests
+  - coverage run --source='src' -m django test --settings tests.settings
+  - coverage report
